@@ -1,0 +1,32 @@
+<h1 class="animated fadeIn">{{ superh.nombre }} <small>{{ superh.aparicion }}</small> </h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+
+    <div class="col-md-4">
+
+        <img [src]="superh.img" class="img-fluid" [alt]="superh.nombre">
+        <br><br>
+        <a [routerLink]="['/heroes']"  class="btn btn-outline-danger btn-block" >Regresar</a>
+
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{ superh.nombre }}</h3>
+        <hr>
+        <p>
+            {{ superh.bio }}
+        </p>
+
+        <div>
+            <img *ngIf="superh.casa=='Marvel'"  class="img-logo"  src="assets/img/marvel.jpg" alt="MARVEL">
+            <img *ngIf="superh.casa=='DC'" class="img-logo" src="assets/img/dc.jpg" alt="DC">
+            
+        </div>
+
+
+
+    </div>
+
+
+</div>
